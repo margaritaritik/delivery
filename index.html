@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    <link rel="stylesheet" href="./style.css">
+ 
+  </head>
+  <body>
+    <header>
+      <h1>Доставка</h1>
+    </header>
+    <main>
+     
+<div class="container_delivery">
+    <div class="item_delivery">
+        <img src="./1791-2020-11-12-s0ztnu.png"/>
+        <div class="dropdown">
+            <button class="dropbtn">Выберите опции</button>
+            <div class="dropdown-content">
+                <label><input type="radio" name="delivery" value="Постамат">Постамат</label>
+                <label><input type="radio" name="delivery" value="Самовывоз из ПВЗ">Самовывоз из ПВЗ</label>
+                <label><input type="radio" name="delivery" value="Курьер">Курьер</label>
+            </div>
+        </div>
+    
+        <script>
+            const dropbtn = document.querySelector('.dropbtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const checkboxes = dropdownContent.querySelectorAll('input[type="radio"]');
+    
+            dropbtn.addEventListener('click', function() {
+                dropdownContent.classList.toggle('show');
+                dropbtn.classList.toggle('show_points');
+            });
+    
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    dropdownContent.classList.remove('show');
+                }
+            };
+    
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                     const selectedOptions = Array.from(checkboxes)
+                         .filter(i => i.checked)
+                         .map(i => i.value);
+                 dropbtn.textContent = selectedOptions.length > 0 ? selectedOptions.join(', ') : 'Выберите опции';
+                    //dropbtn.textContent = selectedOptions.length > 0 ? selectedOptions. : 'Выберите опции';
+                 });
+            });
+        </script>
+    </div>
+
+</div>
+
+    </main>
+<!--     
+<script src="app.js" defer></script>  -->
+  </body>
+</html>
