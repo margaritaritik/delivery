@@ -23,10 +23,13 @@ body {
     width: 100%;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: space-between;
 }
 .img_delivery {
+    width: 100%;
+    max-width: 150px;
     opacity: 1;
-    transition: 2s;
+    transition: 0.5s;
 }
 .item_delivery{
     display: flex;
@@ -41,6 +44,7 @@ body {
     justify-content: space-between;
     padding: 20px;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .dropdown {
@@ -67,19 +71,17 @@ body {
     
     
 }
-.dropbtn:after {
-content:">";
-margin-left: 10px;
-    
-}
+
 .show_points {
     position: absolute;
-   
-    animation: 1s linear 0s 1 normal forwards slidein;
+    
+    animation: 0.5s linear 0s 1 normal forwards slidein;
 }
+
+
 .hide_points {
     position: absolute;
-    animation: 1s linear 1s 1 reverse forwards slidein;
+    animation: 0.5s linear 1s 1 reverse forwards slidein;
 }
 
 
@@ -111,17 +113,36 @@ margin-left: 10px;
 
 .show {
     display: block;
-    animation: 1s linear 0s 1 normal forwards show_delivery;
+    animation: 0.5s linear 0s 1 normal forwards show_delivery;
 }
 .hidden_points{
     
-    animation: 1s linear 0s 1 reverse forwards show_delivery;
+    animation: 0.5s linear 0s 1 reverse forwards show_delivery;
 }
 .img_delivery_hide{
     opacity: 0;
     
 }
 
+/* <> */
+
+    /* .dropbtn{cursor: pointer; position: absolute; top: 20px; left: 10px;} */
+    .dropbtn:before, .dropbtn:after {content: "";
+        position: absolute;
+        width: 14px;
+        height: 2px;
+        right: 5px;
+        top: 6px;
+        background: gray;}
+    .dropbtn:before {transform: rotate(45deg);}
+    .dropbtn:after {transform: rotate(-45deg); right: 14px;}
+    .show_points .dropbtn:after {
+        transform: rotate(-45deg);
+        right: 5px;
+        transition: 1s;
+    }
+    
+    
 @keyframes slidein {
     from {
         top: 75%;

@@ -1,16 +1,24 @@
 
-            const img_delivery = document.querySelector('.img_delivery');
-            const dropbtn = document.querySelector('.dropbtn');
+           
             const dropdownContent = document.querySelector('.dropdown-content');
+            const img_delivery = dropdownContent.querySelector('.img_delivery');
+            const dropbtn = dropdownContent.querySelector('.dropbtn');
             const checkboxes = dropdownContent.querySelectorAll('input[type="radio"]');
-    
-            dropbtn.addEventListener('click', function() {
-                dropdownContent.classList.toggle('show');
-                dropbtn.classList.toggle('show_points');
-                dropbtn.classList.remove('hide_points');
-                img_delivery.classList.toggle('img_delivery_hide');
+            
+            function DeliveryClick(id) {
                 
-            });
+                const block = id.closest('.item_delivery');
+               
+                const block_dropdown = id.closest('.dropdown');
+                // console.log();
+                block_dropdown.querySelector('.dropdown-content').classList.toggle('show');
+                id.classList.toggle('show_points');
+                id.classList.remove('hide_points');
+                block.querySelector('.img_delivery').classList.toggle('img_delivery_hide');
+               
+                
+            }
+            
     
             window.onclick = function(event) {
                 if (!event.target.matches('.dropbtn')) {
