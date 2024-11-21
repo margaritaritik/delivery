@@ -1,72 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Заголовок страницы</title>
-    <link rel="stylesheet" href="./style.css">
- 
-  </head>
-  <body>
-    <header>
-      <h1>Доставка</h1>
-    </header>
-    <main>
-     
-<div class="container_delivery">
-    <div class="item_delivery">
-        <img class="img_delivery" src="./images/cdek.png"/>
-        <div class="dropdown">
-            <button  id="cdek" class="dropbtn">Выберите опции</button>
-            <div class="dropdown-content">
-                <label><input type="radio" name="delivery" value="Постамат">Постамат</label>
-                <label><input type="radio" name="delivery" value="Самовывоз из ПВЗ">Самовывоз из ПВЗ</label>
-                <label><input type="radio" name="delivery" value="Курьер">Курьер</label>
+    <link rel="stylesheet" href="test.css">
+    <title>Выбор доставки</title>
+</head>
+<body>
+    <div class="delivery-container">
+        <div class="delivery-option" data-delivery="СДЭК">
+            <img src="../images/cdek.png" alt="СДЭК">
+            <div class="selected-delivery">Способ доставки <span> от 200 р</span></div>
+            <div class="combo-box">
+                <div class="option" data-option="Курьером"><p>Курьером</p><p class="price_delivery">от 200 р</p></div>
+                <div class="option" data-option="ПВЗ"><p>ПВЗ</p><p class="price_delivery">от 200 р</p></div>
+                <div class="option" data-option="Постамат"><p>Постамат</p><p class="price_delivery">от 200 р</p></div>
             </div>
-        </div>  
+        </div>
+        <div class="delivery-option" data-delivery="Яндекс">
+            <img src="../images/yandex.png" alt="Яндекс">
+            <div class="selected-delivery">Способ доставки <span> от 200 р</span></div>
+            <div class="combo-box">
+                <div class="option" data-option="Курьером"><p>Курьером</p><p class="price_delivery">от 200 р</p></div>
+                <div class="option" data-option="ПВЗ"><p>ПВЗ</p><p class="price_delivery">от 200 р</p></div>
+                <div class="option" data-option="Постамат"><p>Постамат</p><p class="price_delivery">от 200 р</p></div>
+            </div>
+        </div>
+        <div class="delivery-option" data-delivery="Почта России">
+            <img src="../images/mail.png" alt="Почта России">
+            <div class="selected-delivery">Способ доставки <span> от 200 р</span></div>
+            <div class="combo-box">
+                <div class="option" data-option="Курьером"><p>Курьером</p><p class="price_delivery">от 200 р</p></div>
+                <div class="option" data-option="ПВЗ"><p>ПВЗ</p><p class="price_delivery">от 200 р</p></div>
+                <div class="option" data-option="Постамат"><p>Постамат</p><p class="price_delivery">от 200 р</p></div>
+            </div>
+        </div>
     </div>
 
-    <!-- <div class="item_delivery">
-      <img class="img_delivery" src="./images/yandex.png"/>
-      <div class="dropdown">
-          <button onclick="DeliveryClick(this)" id="yandex" class="dropbtn">Выберите опции</button>
-          <div class="dropdown-content">
-              <label><input type="radio" name="delivery" value="Постамат">Постамат</label>
-              <label><input type="radio" name="delivery" value="Самовывоз из ПВЗ">Самовывоз из ПВЗ</label>
-              <label><input type="radio" name="delivery" value="Курьер">Курьер</label>
-          </div>
-      </div>  
-  </div>
-
-
-  <div class="item_delivery">
-    <img class="img_delivery" src="./images/shop.png"/>
-    <div class="dropdown">
-        <button id="shop" class="dropbtn">Выберите опции</button>
-        <div class="dropdown-content">
-            <label><input type="radio" name="delivery" value="Постамат">Постамат</label>
-            <label><input type="radio" name="delivery" value="Самовывоз из ПВЗ">Самовывоз из ПВЗ</label>
-            <label><input type="radio" name="delivery" value="Курьер">Курьер</label>
-        </div>
-    </div>  
-</div>
-
-<div class="item_delivery">
-  <img class="img_delivery" src="./images/mail.png"/>
-  <div class="dropdown">
-      <button id="mail" class="dropbtn">Выберите опции</button>
-      <div class="dropdown-content">
-          <label><input type="radio" name="delivery" value="Постамат">Постамат</label>
-          <label><input type="radio" name="delivery" value="Самовывоз из ПВЗ">Самовывоз из ПВЗ</label>
-          <label><input type="radio" name="delivery" value="Курьер">Курьер</label>
-      </div>
-  </div>  
-</div> -->
-
-</div>
-
-    </main>
-     
-<script src="app.js" defer></script>  
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
